@@ -1,67 +1,67 @@
 @import url('https://fonts.googleapis.com css2?family-Open+Sans:wght@300;400;00;600;700&display=swap');
-*
-{
-    margin: 0;padding: 0;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans' ,sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
-body
-{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(#009688 0%,#009688 130px,#d9dbd5 130px,#d9dbd5 100%)
+    background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%)
 }
-.container
-{
+
+.container {
     position: relative;
     width: 1396px;
     max-width: 100%;
-    height: calc( 100vh - 40px);
-    background:#fff;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06),0 2px 5px 0 rgba(0,0,0,0.06);
+    height: calc(100vh - 40px);
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
     display: flex;
 }
-.container .rightside
-{
+
+.container .rightside {
     position: relative;
     flex: 70%;
-    background:#e5ddd5;
+    background: #e5ddd5;
 }
-.container .rightside::before
-{
+
+.container .rightside::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background:url(img6-bg.jpg) ;
+    background: url(img6-bg.jpg);
     opacity: 0.06;
 }
-.header
-{
+
+.header {
     position: relative;
     width: 100%;
     height: 60px;
     background: #ededed;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 15px;
 }
-.userimg
-{
+
+.userimg {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     overflow: hidden;
     border-radius: 50%;
     cursor: pointer;
 }
-.cover
-{
+
+.cover {
     position: absolute;
     top: 0;
     left: 0;
@@ -69,14 +69,16 @@ body
     height: 100%;
     object-fit: cover;
 }
-.message_p
-{
+
+
+
+.message_p {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.message_p p
-{
+
+.message_p p {
     color: #aaa;
     display: -webkit-box;
     -webkit-line-break: 1;
@@ -84,8 +86,8 @@ body
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.message_p b
-{
+
+.message_p b {
     background-color: red;
     color: #fff;
     min-width: 20px;
@@ -96,35 +98,51 @@ body
     align-items: center;
     font-size: 0.75em;
 }
-.imgText
-{
+
+.imgText {
+    width: 120px;
+    height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.imgText h4 span
-{
+
+.show{
+    background-color: #ccc;
+}
+
+.imgText:hover{
+    background-color: #ccc;
+}
+
+.imgText h4 span {
     font-size: 0.8em;
     color: #555;
 }
-.chatBox
-{
-    position: relative;
+
+.outbox{
     width: 100%;
     height: 500px;
-    padding: 50px;
-    overflow-y: auto;
+    position: relative;
+    overflow: hidden;
 }
-.message
-{
+.chatBox {
+    position: absolute;
+    right: -17px;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+.message {
     position: relative;
     display: flex;
     width: 100%;
     margin: 5px 0;
 }
-.message p
-{
+
+.message p {
     position: relative;
     right: 0;
     text-align: right;
@@ -134,48 +152,48 @@ body
     border-radius: 10px;
     font-size: 0.9em;
 }
-.message p::before
-{
+
+.message p::before {
     content: '';
     position: absolute;
     top: 0;
     right: -12px;
     width: 20px;
     height: 20px;
-    background: linear-gradient(135deg,#dcf8c6 0%,#dcf8c6 50%,transparent 50%,transparent);
+    background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
 }
-.message p span
-{
+
+.message p span {
     display: block;
     margin-top: 5px;
     font-size: 0.85em;
     opacity: 0.5;
 }
-.my_message
-{
+
+.my_message {
     justify-content: flex-end;
 }
-.frnd_message
-{
+
+.frnd_message {
     justify-content: flex-start;
 }
-.frnd_message p
-{
+
+.frnd_message p {
     background: #fff;
     text-align: left;
 }
-.message.frnd_message p::before
-{
+
+.message.frnd_message p::before {
     content: '';
     position: absolute;
     top: 0;
     left: -12px;
     width: 20px;
     height: 20px;
-    background: linear-gradient(225deg,#fff 0%,#fff 50%,transparent 50%,transparent);
+    background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
 }
-.chatbox_input
-{
+
+.chatbox_input {
     position: relative;
     width: 100%;
     height: 150px;
@@ -184,11 +202,11 @@ body
     justify-content: space-between;
     align-items: center;
 }
-.chatbox_input input
-{
+
+.chatbox_input input {
     position: relative;
     width: 90%;
-    
+
     margin: 0 20px;
     padding: 10px 20px;
     border: none;
@@ -197,7 +215,7 @@ body
     font-size: 1em;
 }
 
-.infobtn{
+.infobtn {
     padding: 10px 20px;
     background-color: #bfa;
     border: none;
