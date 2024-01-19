@@ -42,7 +42,6 @@ async function op() {
       test.value = "";
       const a = await axios.get("https://api.lolimi.cn/API/AI/bj.php", { params: { msg: tv } });
       const b = await opmusic.get("https://api.lolimi.cn/API/yyhc/y.php", { params: { msg: a.data.data.output, speaker: Enmae, noisew: "0.3", sdp: "2", Length: "1", noise: "0.6", type: "1" } })
-      console.log(b);
       audio.src = b.data.music
       audio.play()
       chatBox.insertAdjacentHTML("beforeend", `<div class="message frnd_message">
