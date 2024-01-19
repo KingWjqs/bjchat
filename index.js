@@ -74,13 +74,13 @@ async function op() {
 }
 btn.addEventListener('click',function (e) {
    renderInfo("right",test.value)
-   debounce(op, 3000)
+   debounce(op, 1200)
 })
 
 test.addEventListener('keydown', function (e) {
    if (e.key === "Enter" && test.value.trim() !== "") {
       renderInfo("right",test.value);
-      debounce(op, 3000);
+      debounce(op, 1200);
    }
 })
 
